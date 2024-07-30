@@ -7,6 +7,8 @@ module.exports = {
         contrast: " #FAFAFA",
         regular: "#AAA",
         primary: "#101010",
+        bgColor: "rgba(47, 47, 47, 0.70)",
+        bgContrast: "#FAFAFA",
       },
 
       fontSize: {

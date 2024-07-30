@@ -9,39 +9,90 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
+li {
+  list-style: none;
+}
 img {
   max-width: 100%;
   display: block;
 }
 .custom-padding {
-  padding-left: clamp(23px, 12vw, 193px);
+  padding-left: clamp(23px, 7vw, 193px);
 }
+
 .custom-fontSize {
   font-size: clamp(28px, 7vw, 56px);
 }
-@media (max-width: 1040px) {
+.custom-nav-menu {
+  @apply flex-custom max-h-28 h-28 max-md:max-h-20 text-accent font-bolder;
+}
+
+.custom-height {
+  height: calc(100vh - 112px);
+}
+input {
+  border: none;
+  outline: none;
+}
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.custom-grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media (max-width: 768px) {
   .custom-nav {
     position: fixed;
-    top: 0;
+    top: 15px;
     left: 0;
     flex-direction: column;
+    background-color: #2f2f2f;
+    color: white;
+    width: 220px;
+    padding: 70px 20px 40px 20px;
+    border-radius: 30px;
+    margin-left: 1.2rem;
+    gap: 12px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1040px) {
+  .custom-nav {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    flex-direction: column;
+    background-color: #2f2f2f;
+    color: white;
+    width: 220px;
+    padding: 70px 20px 40px 20px;
+    border-radius: 30px;
+    margin-left: 1.2rem;
+    gap: 12px;
+  }
+}
+
 @layer components {
   .header-styles {
-    @apply text-accent custom-padding pt-[47px] max-sm:pt-[63px]  bg-hero-pattern bg-cover bg-no-repeat rounded-[20px] pb-14
+    @apply text-accent custom-padding pr-2 pt-[47px] lg:pl-[198px] max-sm:pt-[50px]  bg-hero-pattern bg-cover bg-no-repeat rounded-[20px] pb-14
         max-sm:pb-16;
   }
   .header-text {
     @apply max-w-[457px]  font-xl_bold lg:leading-[67px] mb-[50px] max-sm:mb-4 max-sm:max-w-[252px] leading-[55px] max-sm:leading-[40px]  custom-fontSize;
   }
   .header-paragraph {
-    @apply mb-[60px] max-sm:mb-6 max-w-[520px] text-base font-bolder max-sm:text-[12px] opacity-[0.8] max-sm:max-w-[265px];
+    @apply mb-[60px] max-sm:mb-6 max-w-[520px] text-base font-bolder max-sm:text-[12px] opacity-[0.8] max-sm:max-w-[265px] max-sm:text-white;
   }
   .header-btn {
     @apply text-base max-sm:text-xs text-white bg-accent px-[54px] py-[15px] rounded-lg max-sm:px-[34px] max-sm:py-3;
   }
   .flex-custom {
     @apply flex items-center justify-between;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
   }
 }
