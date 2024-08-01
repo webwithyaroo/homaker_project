@@ -1,7 +1,14 @@
-import { Button, MaxWidth, LoginPage } from "../Components/constant";
+import {
+  Button,
+  MaxWidth,
+  LoginPage,
+  Testimonials,
+  LogosTab,
+} from "../Components/constant";
+import { productItem } from "../products";
+import Products from "../Components/Products";
 import {
   line,
-  logoTab,
   furnitureShowcase,
   featureLists,
   chairDesigns,
@@ -12,16 +19,16 @@ const Home = () => {
       <MaxWidth>
         <header>
           <div className="header-styles  ">
-            <h1 className="header-text">
+            <h1 className="header-text text-balance max-sm:text-white">
               Find the Best Home Furniture for Your Room
             </h1>
-            <p className="header-paragraph">
+            <p className="header-paragraph text-balance max-sm:text-white">
               Accent chairs at Herman Miller include a clear mid-century modern
               accent
             </p>
             <div className="flex-custom max-w-[520px] max-sm:flex-col max-sm:items-start ">
               <Button label={"Shop now"} className={"header-btn"} />
-              <div className="flex-custom gap-8 max-sm:gap-2 max-sm:mt-8">
+              <div className="flex-custom max-sm:text-white gap-8 max-sm:gap-2 max-sm:mt-8">
                 <div>
                   <h1 className="text-xl font-lg_bold">20k+</h1>
                   <p>Collection</p>
@@ -38,13 +45,17 @@ const Home = () => {
           </div>
         </header>
         {/* logo tab */}
-        <LogoTab />
+        <LogosTab />
         {/* furniture showcase */}
         <FurnitureTab />
         {/* furniture list */}
         <FeatureSection />
         {/* Our chair Designs */}
         <OurChairDesigns />
+        {/* popular products */}
+        <PopularProductsSection />
+        {/* Testimonials */}
+        <Testimonials />
       </MaxWidth>
       {/* login page */}
       <LoginPage />
@@ -54,27 +65,12 @@ const Home = () => {
 
 export default Home;
 
-// logo section
-function LogoTab() {
-  return (
-    <ul className="flex items-center justify-evenly mt-[76px] max-sm: gap-[28px] mb-[96px] max-sm:mb-[52px]">
-      {logoTab.map((logo) => (
-        <li key={logo.logo}>
-          <img src={logo.logo} alt="logo" />
-        </li>
-      ))}
-    </ul>
-  );
-}
-
 //furniture section
 function FurnitureTab() {
   return (
     <section className="text-center">
-      <h1 className="lg:text-6xl text-xl max-[360px]:text-base font-bolder">
-        Exclusive Furniture
-      </h1>
-      <p className="mb-14 max-sm:mb-8 text-balance">
+      <h1 className=" custom-fontSizeBig font-bolder">Exclusive Furniture</h1>
+      <p className="mb-14 max-sm:mb-8 lg:text-balance custom-fontSizeSmall text-regular">
         Check out this week's selection of popular products that might catch
         your eye. and don't
       </p>
@@ -96,10 +92,10 @@ function FurnitureTab() {
 function FeatureSection() {
   return (
     <section>
-      <h1 className="lg:text-6xl text-xl max-[360px]:text-base font-bolder max-w-[661px] mx-auto text-center mt-[89px] max-sm:mt-[52px] text-balance">
+      <h1 className="font-bolder max-w-[661px] mx-auto text-center mt-[89px] text-balance custom-fontSizeBig">
         Our Features Special For You
       </h1>
-      <p className="mb-14 max-sm:mb-8 max-w-[661px] mx-auto text-center text-base max-sm:text-xs text-regular text-balance">
+      <p className="mb-14 max-sm:mb-8 max-w-[661px] custom-fontSizeSmall text-regular text-balance">
         We provide a variety of specials features for all of you, to make it
         easier and make you even more happy shopping here.
       </p>
@@ -140,7 +136,7 @@ function OurChairDesigns() {
             />
           </div>
           <div>
-            <h1 className="lg:text-6xl text-3xl max-sm:text-lg lg:leading-[50px] mb-6 max-sm:mb-4 font-bold max-[360px]:text-base max-sm:max-w-[430px] max-sm:mt-4">
+            <h1 className="custom-fontSizeMed lg:leading-[50px] mb-6 max-sm:mb-4  max-sm:max-w-[430px] max-sm:mt-4">
               {design.title}
             </h1>
             <p className="text-balance text-regular">{design.text}</p>
@@ -152,6 +148,45 @@ function OurChairDesigns() {
             />
           </div>
         </li>
+      ))}
+    </ul>
+  );
+}
+
+// popular products tab
+
+function PopularProductsSection() {
+  return (
+    <section className="mt-[96px] max-sm:mt-[52px]">
+      <h1 className="custom-fontSizeBig mb-[73px] max-sm:mb-8 font-bolder">
+        Our popular product
+      </h1>
+      <PopularProducts />
+
+      {/* See all product */}
+      <div className="w-full flex-center text-[18px] text-white max-lg:hidden">
+        <Button
+          label={"See all product"}
+          className={
+            "px-[65px] py-3  mt-16  bg-gradient-to-r from-[#404346] to-[#232526]   rounded-xl"
+          }
+        />
+      </div>
+    </section>
+  );
+}
+
+function PopularProducts() {
+  return (
+    <ul className="custom-grid gap-x-[40px] max-sm:gap-x-[30px]">
+      {productItem.map((item) => (
+        <Products
+          iconUrl={item.iconUrl}
+          label={item.label}
+          desc={item.desc}
+          price={item.price}
+          prevPrice={item.prevPrice}
+        />
       ))}
     </ul>
   );

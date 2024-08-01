@@ -17,7 +17,7 @@ const LoginPage = () => {
     <section
       className={
         clicked
-          ? "fixed top-0 w-screen md:pt-[90px] h-screen grid place-content-center pt-10 bg-bgColor"
+          ? "fixed top-0 w-screen md:pt-[90px] h-screen grid place-content-center pt-10 max-sm:pt-20 bg-bgColor px-4"
           : "bg-transparent"
       }
     >
@@ -46,17 +46,17 @@ const LoginPage = () => {
             Please enter your e-mail address and e-mail password
           </p>
 
-          <div className="flex-center mb-6 gap-6 flex-wrap">
+          <div className="flex-center mb-6 gap-6 max-sm:gap-4 max-[323px]:flex-wrap">
             <Button
               className={
-                "  py-[12px] lg:px-8 px-6 ring-1 rounded-3xl flex-center gap-2 max-w-[143px] ring-regular "
+                "  py-[12px] lg:px-8 px-6 max-[290px]:px-4 max-[290px]:py-2 ring-1 rounded-3xl flex-center gap-2 max-w-[143px] ring-regular "
               }
               IconUrl={google}
               label={"Google"}
             />
             <Button
               className={
-                " py-[12px]  lg:px-8 px-6 ring-1 rounded-3xl ring-regular flex-center gap-2 max-w-[143px]"
+                " py-[12px]  lg:px-8 px-6 ring-1 rounded-3xl ring-regular flex-center gap-2 max-w-[143px] max-[290px]:px-4 max-[290px]:py-2"
               }
               IconUrl={facebook}
               label={"facebook"}
@@ -88,7 +88,7 @@ function SignInBtn() {
     <>
       <Button
         label={"Sign In"}
-        className={"bg-black text-white w-full py-[19px] rounded-full mt-4"}
+        className={"bg-black text-white w-full py-[19px] rounded-full mt-4 "}
       />
       <p className="pt-4 text-center pb-6 text-xs">
         Don’t have an account?{" "}
@@ -102,8 +102,8 @@ function SignInBtn() {
 //form check btn
 function CheckPassword() {
   return (
-    <div className="flex-custom mt-3 text-[13px]">
-      <div className="flex  gap-2 cursor-pointer">
+    <div className="flex-custom mt-3 text-[13px] gap-3 flex-wrap ">
+      <div className="flex items-center   gap-2 cursor-pointer">
         <img src={check} alt="icon" />
         <p>Remember me</p>
       </div>
@@ -116,18 +116,22 @@ function FormInput() {
   return (
     <form action="" className="text-xs mt-6">
       {/* Email */}
-      <div className="flex gap-4 rounded-full ring-[1px]  ring-regular p-4">
+      <div className="flex gap-4 rounded-full ring-[1px] min-w-5 ring-regular p-4">
         <label for="email">
           <img src={message} alt="gmail" />
         </label>
-        <input type="email" placeholder="Jimmyvan@gmail.com" />
+        <input
+          type="email"
+          placeholder="Jimmyvan@gmail.com"
+          className="w-full"
+        />
       </div>
       {/* Password */}
-      <div className="flex gap-4 mt-4 rounded-full ring-[1px] ring-regular p-4">
+      <div className="flex gap-4 mt-4 rounded-full ring-[1px] ring-regular p-4 w-full ">
         <label for="password">
           <img src={lock} alt="lock" />
         </label>
-        <input type="password" placeholder="Your password" />
+        <input type="password" placeholder="Your password" className="w-full" />
       </div>
     </form>
   );

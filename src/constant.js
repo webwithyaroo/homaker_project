@@ -1,5 +1,7 @@
 //All IMG IMPORT
+
 import searchIcon from "./assets/Search.png";
+import user from "./assets/user.png";
 import buyIcon from "./assets/Buy.png";
 import chaseLogo from "./assets/chase.png";
 import creditCard from "./assets/creditcard.png";
@@ -31,8 +33,23 @@ import close from "./assets/close.png";
 import purchase from "./assets/purchase.png";
 import bus from "./assets/bus.png";
 import discount from "./assets/discount.png";
+import quote from "./assets/quotation.png";
+import arrowRight from "./assets/arrowRight.png";
+import arrowLeft from "./assets/arrowLeft.png";
+import apple from "./assets/apple.png";
+import googlePlay from "./assets/google.png";
+import heart from "./assets/Heart.png";
+import star from "./assets/star.svg";
 
 export {
+  star,
+  heart,
+  apple,
+  googlePlay,
+  arrowLeft,
+  arrowRight,
+  quote,
+  user,
   bus,
   purchase,
   discount,
@@ -66,6 +83,40 @@ export {
   image7,
   image8,
 };
+
+//testimonials
+export const testimonials = [
+  {
+    text: "The integration of technology is making purchasing more efficient. Simply click on the store to place your order, and your items will be dispatched immediately. You'll receive an automatic notification when the goods arrive.",
+    name: "Liam Carter",
+    IconUrl: user,
+    profession: "Designer",
+  },
+  {
+    text: "Everything is increasingly integrated so that buying becomes more efficient, just click on the store ready to order and the goods will be sent as soon as possible. When the goods have arrived, an order notification will automatically enter.",
+    name: "Ethan Johnson",
+    IconUrl: user,
+    profession: "Designer",
+  },
+  {
+    text: "With advancements in integration, shopping has become more streamlined. Click on the store to order, and your products will be shipped promptly. An order notification will be sent to you as soon as your items arrive.",
+    name: "Ava Mitchell",
+    IconUrl: user,
+    profession: "Designer",
+  },
+  {
+    text: "The growing integration of systems is enhancing the efficiency of purchases. Click on the store to order, and your items will be sent out as soon as possible. You will automatically receive a notification upon delivery.",
+    name: "Ava Mitchell",
+    IconUrl: user,
+    profession: "Designer",
+  },
+  {
+    text: "As technology becomes more integrated, buying is getting easier. Just select the store and place your order, and your goods will be shipped right away. An automatic notification will inform you when your items are delivered.",
+    name: "Noah Benn",
+    IconUrl: user,
+    profession: "Designer",
+  },
+];
 
 //feature section lists
 export const featureLists = [
@@ -139,4 +190,33 @@ export const navLinks = [
   { href: "/products", label: "Products" },
   { href: "/newsfeed", label: "Newsfeed" },
   { href: "/promo", label: "Promo" },
+];
+//footer links
+export const footerLinks = [
+  {
+    label: " KURSIKU",
+    links: [
+      "About Information",
+      "Blog",
+      "E-catalogue",
+      "Store location",
+      "Career",
+      "Affiliates",
+    ],
+  },
+  {
+    label: "CUSTOMER SERVICE",
+    links: [
+      "Resolution Center",
+      "How to Shop",
+      "Payment",
+      "Freight Forwarding & Picking Up",
+      "Installment & Paylater Program",
+      "Free Shipping",
+    ],
+  },
+  {
+    label: " HELP",
+    links: ["Privacy Policy", "Terms & Condition", "Contact Us", "FAQs"],
+  },
 ];

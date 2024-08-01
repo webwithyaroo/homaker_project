@@ -5,6 +5,7 @@
 /*  font-family: "Inter", sans-serif 
     font-family: "Poppins",
 */
+
 * {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
@@ -16,6 +17,41 @@ img {
   max-width: 100%;
   display: block;
 }
+/* loading skeleton */
+/* SkeletonLoader.css */
+.skeleton {
+  background: #e0e0e0;
+  border-radius: 8px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
 .custom-padding {
   padding-left: clamp(23px, 7vw, 193px);
 }
@@ -23,8 +59,24 @@ img {
 .custom-fontSize {
   font-size: clamp(28px, 7vw, 56px);
 }
+.custom-fontSizeMed {
+  font-size: clamp(20px, 4vw, 40px);
+}
+.custom-fontSizeBig {
+  font-size: clamp(20px, 7vw, 40px);
+  text-align: center;
+  margin-inline: auto;
+}
+.custom-fontSizeBig2 {
+  font-size: clamp(20px, 7vw, 40px);
+}
+.custom-fontSizeSmall {
+  font-size: clamp(16px, 2vw, 12px);
+  text-align: center;
+  margin-inline: auto;
+}
 .custom-nav-menu {
-  @apply flex-custom max-h-28 h-28 max-md:max-h-20 text-accent font-bolder;
+  @apply flex-custom max-h-28 h-20 max-md:max-h-20 text-accent font-bolder;
 }
 
 .custom-height {
@@ -41,6 +93,10 @@ input {
 .custom-grid2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.custom-grid3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 @media (max-width: 768px) {
@@ -62,7 +118,7 @@ input {
 @media (min-width: 768px) and (max-width: 1040px) {
   .custom-nav {
     position: fixed;
-    top: 30px;
+    top: 10px;
     left: 0;
     flex-direction: column;
     background-color: #2f2f2f;
@@ -77,14 +133,19 @@ input {
 
 @layer components {
   .header-styles {
-    @apply text-accent custom-padding pr-2 pt-[47px] lg:pl-[198px] max-sm:pt-[50px]  bg-hero-pattern bg-cover bg-no-repeat rounded-[20px] pb-14
+    @apply text-accent custom-padding pr-2 pt-[47px] lg:pl-[198px] max-sm:pt-[50px]  bg-hero-pattern bg-cover max-md:bg-right bg-center bg-no-repeat rounded-[20px] pb-14
         max-sm:pb-16;
   }
+  .header-product {
+    @apply text-accent custom-padding pr-2 pt-[47px]  max-sm:pt-[50px]  bg-hero-banner bg-cover bg-right bg-no-repeat  rounded-[20px] pb-14
+        max-sm:pb-16;
+  }
+
   .header-text {
-    @apply max-w-[457px]  font-xl_bold lg:leading-[67px] mb-[50px] max-sm:mb-4 max-sm:max-w-[252px] leading-[55px] max-sm:leading-[40px]  custom-fontSize;
+    @apply max-w-[457px]  font-xl_bold lg:leading-[67px] mb-[50px] max-sm:mb-4 max-sm:max-w-[252px] leading-[65px] max-sm:leading-[50px] max-[450px]:leading-[40px] custom-fontSize;
   }
   .header-paragraph {
-    @apply mb-[60px] max-sm:mb-6 max-w-[520px] text-base font-bolder max-sm:text-[12px] opacity-[0.8] max-sm:max-w-[265px] max-sm:text-white;
+    @apply mb-[60px] max-sm:mb-6 max-w-[520px] text-base font-bolder max-sm:text-[12px] opacity-[0.8] max-sm:max-w-[265px];
   }
   .header-btn {
     @apply text-base max-sm:text-xs text-white bg-accent px-[54px] py-[15px] rounded-lg max-sm:px-[34px] max-sm:py-3;

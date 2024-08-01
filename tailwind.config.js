@@ -4,11 +4,13 @@ module.exports = {
     extend: {
       colors: {
         accent: "#2F2F2F",
-        contrast: " #FAFAFA",
+        contrast: " #f9f9f9",
         regular: "#AAA",
+        border: "#E7E7E9",
         primary: "#101010",
         bgColor: "rgba(47, 47, 47, 0.70)",
         bgContrast: "#FAFAFA",
+        "#F8F8F8": "#F8F8F8",
       },
 
       fontSize: {
@@ -35,6 +37,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": "url('src/assets/hero1.png')",
+        "hero-banner": "url('src/assets/hero2.png')",
       },
     },
   },
