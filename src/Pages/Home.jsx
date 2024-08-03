@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <MaxWidth>
-        <header>
+        <header className="pt-[80px] max-sm:pt-[75px]">
           <div className="header-styles  ">
             <h1 className="header-text text-balance max-sm:text-white">
               Find the Best Home Furniture for Your Room

@@ -8,6 +8,7 @@ import LogosTab from "./LogosTab";
 import ProductCategory from "./ProductCategory";
 import Products from "./Products";
 import ProductDisplay from "./ProductDisplay";
+
 export {
   ProductDisplay,
   Products,

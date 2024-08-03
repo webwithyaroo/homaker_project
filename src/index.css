@@ -10,6 +10,9 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
+html {
+  scroll-behavior: smooth;
+}
 li {
   list-style: none;
 }
@@ -133,12 +136,12 @@ input {
 
 @layer components {
   .header-styles {
-    @apply text-accent custom-padding pr-2 pt-[47px] lg:pl-[198px] max-sm:pt-[50px]  bg-hero-pattern bg-cover max-md:bg-right bg-center bg-no-repeat rounded-[20px] pb-14
+    @apply text-accent custom-padding pr-2 pt-[47px] lg:pl-[198px] max-sm:pt-[50px]  bg-hero-pattern bg-cover max-md:bg-right bg-center bg-no-repeat rounded-[20px] pb-14 
         max-sm:pb-16;
   }
   .header-product {
     @apply text-accent custom-padding pr-2 pt-[47px]  max-sm:pt-[50px]  bg-hero-banner bg-cover bg-right bg-no-repeat  rounded-[20px] pb-14
-        max-sm:pb-16;
+       max-sm:pb-16;
   }
 
   .header-text {

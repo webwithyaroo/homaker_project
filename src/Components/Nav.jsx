@@ -28,12 +28,14 @@ const Nav = () => {
     };
   }, []);
 
-  const { handleLoginShow } = useContext(AppContext);
+  const { handleLoginShow, cart, selectedProduct } = useContext(AppContext);
+  const itemInCart = cart.find((item) => item.id === selectedProduct.id);
+  const quantity = itemInCart ? itemInCart.quantity : 0;
 
   return (
-    <div className="bg-white relative z-50">
+    <div className="bg-white fixed h-[70px] z-50 w-full shadow-sm">
       <MaxWidth>
-        <nav className="custom-nav-menu">
+        <nav className="custom-nav-menu fixed top-0 left-[2rem] right-[2rem]">
           <div className="flex-custom gap-20">
             <Button
               IconUrl={menu}
@@ -53,9 +55,15 @@ const Nav = () => {
             />
           </div>
           <div className="flex-custom">
-            <div className="flex-custom gap-6 max-sm:gap-2 border-r-2 border-accent max-sm:border-transparent pr-10 max-sm:pr-2">
+            <div className="flex-custom gap-6 max-sm:gap-2 border-r-2 border-accent max-sm:border-transparent pr-10 max-sm:pr-2 relative">
               <Button IconUrl={searchIcon} />
-              <Button IconUrl={buyIcon} />
+              <Link to={"/Cart"}>
+                <Button IconUrl={buyIcon} className={"relative"}>
+                  <span className="w-4 h-4  p-3 flex-center rounded-full bg-green-400 text-white absolute top-4 -right-2 text-xs">
+                    {quantity}
+                  </span>
+                </Button>
+              </Link>
             </div>
             <div className="flex-custom pl-10 max-sm:pl-2 gap-4">
               <Button label={"Sign Up"} className={"max-sm:hidden"} />

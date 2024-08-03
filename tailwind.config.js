@@ -11,6 +11,7 @@ module.exports = {
         bgColor: "rgba(47, 47, 47, 0.70)",
         bgContrast: "#FAFAFA",
         "#F8F8F8": "#F8F8F8",
+        "#E7E7E9": "#E7E7E9",
       },
 
       fontSize: {

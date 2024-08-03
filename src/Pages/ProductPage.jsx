@@ -10,7 +10,7 @@ const ProductPage = () => {
   return (
     <>
       <MaxWidth>
-        <header>
+        <header className="pt-[80px] max-sm:pt-[75px] ">
           <div className="header-product  ">
             <h1 className="header-text text-balance">
               Find the Best Home Furniture for Your Room

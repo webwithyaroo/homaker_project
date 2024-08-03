@@ -21,7 +21,7 @@ const ProductCategory = () => {
 
   function handleImageChange(curr) {
     setSelectedProduct(curr); // Replace the current state with the new product
-    console.log(selectedProduct.tags);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   const getImages = async (query, page) => {
@@ -44,11 +44,10 @@ const ProductCategory = () => {
       setLoading(false);
     }
   };
-
+  console.log(images);
   const handleSubmit = (e) => {
     e.preventDefault();
     const query = formRef.current.value.trim();
-
     getImages(query || trend, 1);
   };
 
@@ -71,7 +70,7 @@ const ProductCategory = () => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="ring-[1px] ring-border hover:ring-blue-300 hover:text-white shadow-xl max-w-fit mx-auto flex rounded-[10px] mb-16"
+        className="ring-[1px] ring-border hover:ring-blue-300 hover:text-white shadow-xl max-w-fit mx-auto flex rounded-[10px] mb-16 max-sm:hidden"
       >
         <div className="flex p-5 w-[467px] relative">
           <label htmlFor="search">
@@ -93,9 +92,35 @@ const ProductCategory = () => {
         />
       </form>
 
-      <div className="lg:flex-center flex gap-6 text-[18px] max-sm:hidden mb-32 max-lg:overflow-x-scroll scroll-x">
-        {/* Buttons for trend selection */}
-        {/* Button components */}
+      <div className="lg:flex-center flex gap-6 text-[18px] max-sm:hidden mb-32 max-lg:overflow-x-scroll scroll-x ">
+        <Button
+          label={"All"}
+          className={`py-2 px-4 rounded-md ${
+            trend === "all" ? "bg-primary text-white" : "bg-gray-200"
+          }`}
+          onClick={() => handleTrendChange("all")}
+        />
+        <Button
+          label={"Popular"}
+          className={`py-2 px-4 rounded-md ${
+            trend === "popular" ? "bg-primary text-white" : "bg-gray-200"
+          }`}
+          onClick={() => handleTrendChange("popular")}
+        />
+        <Button
+          label={"Recommended"}
+          className={`py-2 px-4 rounded-md ${
+            trend === "recommended" ? "bg-primary text-white" : "bg-gray-200"
+          }`}
+          onClick={() => handleTrendChange("recommended")}
+        />
+        <Button
+          label={"Trending"}
+          className={`py-2 px-4 rounded-md ${
+            trend === "trending" ? "bg-primary text-white" : "bg-gray-200"
+          }`}
+          onClick={() => handleTrendChange("trending")}
+        />
       </div>
 
       <div className="custom-grid3 gap-x-5 lg:gap-y-[57px] gap-y-6">
@@ -149,12 +174,12 @@ const ProductCategory = () => {
             ))}
       </div>
 
-      <div className="flex gap-2 justify-center mb-8">
+      <div className="flex gap-2 justify-center mb-8 mt-10">
         {Array.from({ length: 5 }, (_, index) => index + 1).map((num) => (
           <Button
             key={num}
             label={num}
-            className={`ring-[1px] py-[10px] px-6 rounded-[10px] ring-border hover:bg-primary hover:text-white ${
+            className={`ring-[1px]  w-4 h-4  p-5 flex-center rounded-full ring-border hover:bg-primary hover:text-white ${
               page === num ? "bg-primary text-white" : ""
             }`}
             onClick={() => handlePageChange(num)}
