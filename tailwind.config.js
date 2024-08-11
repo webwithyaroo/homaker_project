@@ -37,8 +37,6 @@ module.exports = {
         xl_bold: "700",
       },
       backgroundImage: {
-        "hero-pattern": "url('src/assets/hero1.png')",
-        "hero-banner": "url('src/assets/hero2.png')",
         "promo-banner": "url('src/assets/promoBanner.png')",
       },
     },

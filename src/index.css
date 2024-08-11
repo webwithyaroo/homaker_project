@@ -189,7 +189,12 @@ body {
 *::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
+.bg-hero-pattern{
+  background-image: url('src/assets/hero1.png')
+}
+.bg-hero-banner {
+  background-image: url('src/assets/hero2.png');
+}
 @layer components {
   .header-styles {
     @apply text-accent custom-padding pr-2 pt-[47px] lg:pl-[198px] max-sm:pt-[50px]  bg-hero-pattern bg-cover max-md:bg-right bg-center bg-no-repeat rounded-[20px] pb-14 
