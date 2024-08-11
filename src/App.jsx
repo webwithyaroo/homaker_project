@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  HashRouter,
+} from "react-router-dom";
 import { Nav, Footer } from "./Components/constant";
 import {
   Home,
@@ -12,7 +17,7 @@ import { AppProvider } from "./contest/AppContext";
 const App = () => {
   return (
     <AppProvider>
-      <Router>
+      <HashRouter>
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,7 +30,7 @@ const App = () => {
         </Routes>
 
         <Footer />
-      </Router>
+      </HashRouter>
     </AppProvider>
   );
 };
