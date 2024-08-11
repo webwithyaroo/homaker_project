@@ -12,9 +12,7 @@ const ProductPage = () => {
       <MaxWidth>
         <header className="pt-[80px] max-sm:pt-[75px] ">
           <div className="header-product  ">
-            <h1 className="header-text text-balance">
-              Find the Best Home Furniture for Your Room
-            </h1>
+            <h1 className="header-text ">Modern Furniture for your home</h1>
             <p className="header-paragraph text-balance">
               Accent chairs at Herman Miller include a clear mid-century modern
               accent

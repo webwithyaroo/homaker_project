@@ -4,6 +4,7 @@ import { heart, star } from "../constant";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../contest/AppContext";
+import axios from "axios";
 
 const ProductDisplay = ({ product }) => {
   const { addToCart, cart, setCart, setImages, images, setSelectedProduct } =
@@ -276,8 +277,6 @@ const ProductDisplay = ({ product }) => {
             ))}
         </div>
       </section>
-
-      <LoginPage />
     </MaxWidth>
   );
 };

@@ -1,6 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Nav, Footer } from "./Components/constant";
-import { Home, ProductPage, ProductsDir, Cart } from "./Pages/constant";
+import {
+  Home,
+  ProductPage,
+  ProductsDir,
+  Cart,
+  NewsFeed,
+  PromoBanner,
+} from "./Pages/constant";
 import { AppProvider } from "./contest/AppContext";
 const App = () => {
   return (
@@ -12,6 +19,8 @@ const App = () => {
           <Route path="/products" element={<ProductPage />} />
           <Route path="/products/:id" element={<ProductsDir />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/newsfeed" element={<NewsFeed />} />
+          <Route path="/promo" element={<PromoBanner />} />
           {/* <Route path="/about" component={""} /> */}
         </Routes>
 

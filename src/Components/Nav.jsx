@@ -35,7 +35,7 @@ const Nav = () => {
   return (
     <div className="bg-white fixed h-[70px] z-50 w-full shadow-sm">
       <MaxWidth>
-        <nav className="custom-nav-menu fixed top-0 left-[2rem] right-[2rem]">
+        <nav className="custom-nav-menu fixed top-0 left-[1rem] right-[1rem]">
           <div className="flex-custom gap-20">
             <Button
               IconUrl={menu}
@@ -56,8 +56,11 @@ const Nav = () => {
           </div>
           <div className="flex-custom">
             <div className="flex-custom gap-6 max-sm:gap-2 border-r-2 border-accent max-sm:border-transparent pr-10 max-sm:pr-2 relative">
-              <Button IconUrl={searchIcon} />
-              <Link to={"/Cart"}>
+              <Button
+                IconUrl={searchIcon}
+                className={"max-[320px]:hidden max-sm:w-5"}
+              />
+              <Link to={"/Cart"} className="max-sm:w-5">
                 <Button IconUrl={buyIcon} className={"relative"}>
                   <span className="w-4 h-4  p-3 flex-center rounded-full bg-green-400 text-white absolute top-4 -right-2 text-xs">
                     {quantity}

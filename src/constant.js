@@ -19,6 +19,23 @@ import image5 from "./assets/image5.png";
 import image6 from "./assets/image6.png";
 import image7 from "./assets/image7.png";
 import image8 from "./assets/image8.png";
+import image9 from "./assets/image9.png";
+import image10 from "./assets/image10.png";
+import image11 from "./assets/image11.png";
+import image12 from "./assets/image12.png";
+import image13 from "./assets/image13.png";
+import image14 from "./assets/image14.png";
+import image15 from "./assets/image15.png";
+import img1 from "./assets/img1.png";
+import img2 from "./assets/img2.png";
+import img3 from "./assets/img3.png";
+import img4 from "./assets/img4.png";
+import img5 from "./assets/img5.png";
+import img6 from "./assets/img6.png";
+import img7 from "./assets/img7.png";
+import img8 from "./assets/img8.png";
+import img9 from "./assets/img9.png";
+import promoBanner from "./assets/promoBanner.png";
 import line from "./assets/line.png";
 import menu from "./assets/menu.svg";
 import loginBanner from "./assets/loginImg.png";
@@ -82,7 +99,95 @@ export {
   image6,
   image7,
   image8,
+  image9,
+  image10,
+  image11,
+  image12,
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  promoBanner,
 };
+//News feed
+
+export const news = [
+  {
+    headline:
+      "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles",
+    IconUrl: image13,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles",
+  },
+  {
+    headline: "20 Unique and Aesthetic Living Room Decorations",
+    IconUrl: image14,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles",
+  },
+  {
+    headline:
+      "Minimalist Home Front Terrace Interior Creates a Warm Atmosphere",
+    IconUrl: image15,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles",
+  },
+  {
+    headline:
+      "Minimalist Home Front Terrace Interior Creates a Warm Atmosphere",
+    IconUrl: image11,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles",
+  },
+];
+export const newsDisplays = [
+  {
+    headline:
+      "6 Tips for Arranging Living Room Corner Shelves and Recommendations",
+    IconUrl: img1,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles....",
+  },
+  {
+    headline: "7 Sweet and Comfortable Shabby Lesehan Living Room Ideas",
+    IconUrl: img2,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles....",
+  },
+  {
+    headline: "6 Modern Minimalist TV Table Models to Beautify the Living Room",
+    IconUrl: img3,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles....",
+  },
+  {
+    headline:
+      "7 Kitchen Hanging Shelf Inspirations that Make the Room More Spacious",
+    IconUrl: img4,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles....",
+  },
+  {
+    headline: "6 Cheap but Beautiful Type 36 Subsidy Home Decoration Ideas",
+    IconUrl: img5,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles....",
+  },
+  {
+    headline:
+      "6 Tips for a Minimalist Home Layout for a Small and Beautiful House",
+    IconUrl: img6,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles....",
+  },
+  {
+    headline:
+      "5 Minimalist Living Room Lighting Inspirations for Your Dream Home",
+    IconUrl: img7,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles....",
+  },
+  {
+    headline:
+      "Minimalist Home Front Terrace Interior Creates a Warm Atmosphere",
+    IconUrl: img8,
+    text: "First Viral in Medan! Magic Chair Can Tighten Intimate Organ Muscles....",
+  },
+];
 
 //testimonials
 export const testimonials = [

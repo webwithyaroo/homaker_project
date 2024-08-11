@@ -24,7 +24,7 @@ const LoginPage = () => {
       <div
         className={
           clicked
-            ? "grid grid-cols-2 max-w-[1000px] max-[800px]:grid-cols-1 shadow-2xl px-2 relative  "
+            ? "grid grid-cols-2 max-w-[1000px] max-[835px]:grid-cols-1 shadow-2xl px-2 relative  "
             : "hidden"
         }
       >
@@ -38,7 +38,7 @@ const LoginPage = () => {
             className="shadow-2xl shadow-black rounded-2xl"
           />
         </div>
-        <div className="bg-white max-h-[530px] max-[800px]:max-h-[670px] rounded-l-2xl lg:px-[42px] px-6 max-[800px]:rounded-2xl ">
+        <div className="bg-white max-h-[530px] max-[835px]:max-h-[670px] rounded-l-2xl lg:px-[42px] px-6 max-[835px]:rounded-2xl ">
           <h1 className="text-lg text-center text-accent mb-4 mt-4">
             Register Now!
           </h1>
@@ -76,7 +76,7 @@ const LoginPage = () => {
         <img
           src={loginBanner}
           alt="banner"
-          className="max-h-[530px] rounded-r-2xl max-[800px]:hidden "
+          className="max-h-[530px] rounded-r-2xl max-[835px]:hidden "
         />
       </div>
     </section>

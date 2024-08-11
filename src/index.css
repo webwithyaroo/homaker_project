@@ -134,6 +134,62 @@ input {
   }
 }
 
+/* WebKit browsers (Chrome, Safari) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 12px;
+  height: 12px; /* Also customize the horizontal scrollbar height if needed */
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox */
+html,
+body {
+  scrollbar-width: thin; /* 'auto' or 'thin' */
+  scrollbar-color: #888 #f1f1f1; /* thumb and track color */
+}
+
+/* Ensuring consistency for all scrollable areas */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @layer components {
   .header-styles {
     @apply text-accent custom-padding pr-2 pt-[47px] lg:pl-[198px] max-sm:pt-[50px]  bg-hero-pattern bg-cover max-md:bg-right bg-center bg-no-repeat rounded-[20px] pb-14 
@@ -145,7 +201,7 @@ input {
   }
 
   .header-text {
-    @apply max-w-[457px]  font-xl_bold lg:leading-[67px] mb-[50px] max-sm:mb-4 max-sm:max-w-[252px] leading-[65px] max-sm:leading-[50px] max-[450px]:leading-[40px] custom-fontSize;
+    @apply max-w-[518px]  font-xl_bold lg:leading-[67px] mb-[50px] max-sm:mb-4 max-sm:max-w-[252px] leading-[65px] max-sm:leading-[50px] max-[450px]:leading-[40px] custom-fontSize;
   }
   .header-paragraph {
     @apply mb-[60px] max-sm:mb-6 max-w-[520px] text-base font-bolder max-sm:text-[12px] opacity-[0.8] max-sm:max-w-[265px];
@@ -158,5 +214,13 @@ input {
   }
   .flex-center {
     @apply flex items-center justify-center;
+  }
+  .fade-mask {
+    @apply absolute inset-x-0 bottom-0 h-16 pointer-events-none;
+    background: linear-gradient(
+      to bottom,
+      rgba(245, 245, 245, 0),
+      rgba(245, 245, 245, 1) 70%
+    );
   }
 }
