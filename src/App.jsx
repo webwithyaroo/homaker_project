@@ -12,7 +12,7 @@ import { AppProvider } from "./contest/AppContext";
 const App = () => {
   return (
     <AppProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
