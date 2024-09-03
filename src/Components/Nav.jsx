@@ -40,7 +40,7 @@ const Nav = () => {
             <Button
               IconUrl={menu}
               className={
-                "hidden max-[1040px]:block fixed z-10 p-3 rounded-full bg-accent shadow-2xl"
+                "hidden max-[1040px]:block fixed left-5 z-10 p-3 rounded-full bg-accent shadow-2xl"
               }
               onClick={handleClick}
             />
@@ -56,12 +56,24 @@ const Nav = () => {
           </div>
           <div className="flex-custom">
             <div className="flex-custom gap-6 max-sm:gap-2 border-r-2 border-accent max-sm:border-transparent pr-10 max-sm:pr-2 relative">
-              <Button
-                IconUrl={searchIcon}
-                className={"max-[320px]:hidden max-sm:w-5"}
-              />
+              <Link to={"/products"}>
+                {" "}
+                <Button
+                  onClick={() =>
+                    window.scrollTo({ top: 420, behavior: "smooth" })
+                  }
+                  IconUrl={searchIcon}
+                  className={"max-[320px]:hidden max-sm:w-5"}
+                />
+              </Link>
               <Link to={"/Cart"} className="max-sm:w-5">
-                <Button IconUrl={buyIcon} className={"relative"}>
+                <Button
+                  IconUrl={buyIcon}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                  className={"relative"}
+                >
                   <span className="w-4 h-4  p-3 flex-center rounded-full bg-green-400 text-white absolute top-4 -right-2 text-xs">
                     {quantity}
                   </span>
@@ -91,7 +103,11 @@ export default Nav;
 const NavList = React.forwardRef(({ className }, ref) => (
   <ul ref={ref} className={twMerge("flex gap-10", className)}>
     {navLinks.map((link, index) => (
-      <li key={index}>
+      <li
+        key={index}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className=" hover:underline hover:underline-offset-4"
+      >
         <Link to={link.href}>{link.label}</Link>
       </li>
     ))}

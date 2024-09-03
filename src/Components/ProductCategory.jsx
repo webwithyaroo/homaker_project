@@ -70,9 +70,9 @@ const ProductCategory = () => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="ring-[1px] ring-border hover:ring-blue-300 hover:text-white shadow-xl max-w-fit mx-auto flex rounded-[10px] mb-16 max-sm:hidden"
+        className="ring-[1px] ring-border hover:ring-blue-300 hover:text-white shadow-xl max-w-fit mx-auto flex rounded-[10px] mb-16 max-[402px]:hidden "
       >
-        <div className="flex p-5 w-[467px] relative">
+        <div className="flex items-center p-5 w-[467px] relative">
           <label htmlFor="search">
             <span>
               <img src={searchIcon} alt="search" />
@@ -92,32 +92,40 @@ const ProductCategory = () => {
         />
       </form>
 
-      <div className="lg:flex-center flex gap-6 text-[18px] max-sm:hidden mb-32 max-lg:overflow-x-scroll scroll-x ">
+      <div className="lg:flex-center items-center justify-center flex gap-6 text-[18px] max-sm:hidden mb-32 max-lg:overflow-x-scroll scroll-x ">
         <Button
           label={"All"}
           className={`py-2 px-4 rounded-md ${
-            trend === "all" ? "bg-primary text-white" : "bg-gray-200"
+            trend === "all"
+              ? "bg-primary text-white"
+              : "ring-1 ring-gray-200 rounded-xl"
           }`}
           onClick={() => handleTrendChange("all")}
         />
         <Button
           label={"Popular"}
           className={`py-2 px-4 rounded-md ${
-            trend === "popular" ? "bg-primary text-white" : "bg-gray-200"
+            trend === "popular"
+              ? "bg-primary text-white"
+              : "ring-1 ring-gray-200 rounded-xl"
           }`}
           onClick={() => handleTrendChange("popular")}
         />
         <Button
           label={"Recommended"}
           className={`py-2 px-4 rounded-md ${
-            trend === "recommended" ? "bg-primary text-white" : "bg-gray-200"
+            trend === "recommended"
+              ? "bg-primary text-white"
+              : "ring-1 ring-gray-200 rounded-xl"
           }`}
           onClick={() => handleTrendChange("recommended")}
         />
         <Button
           label={"Trending"}
           className={`py-2 px-4 rounded-md ${
-            trend === "trending" ? "bg-primary text-white" : "bg-gray-200"
+            trend === "trending"
+              ? "bg-primary text-white"
+              : "ring-1 ring-gray-200 rounded-xl"
           }`}
           onClick={() => handleTrendChange("trending")}
         />
